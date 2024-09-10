@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torrent to Google Drive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Torrent to Google Drive Downloader</h1>
+
+      <!-- Google Login Button -->
+      <button onclick="handleSignInClick()">Login with Google</button>
+      <p id="status">Not logged in</p>
+
+      <!-- Torrent File Upload -->
+      <input type="file" id="torrentFile" accept=".torrent" />
+
+      <!-- Magnet Link Input -->
+      <input type="text" id="magnetLink" placeholder="Enter Magnet Link" />
+
+      <!-- Start Download Button -->
+      <button onclick="startDownload()">Start</button>
+
+      <!-- Progress Display -->
+      <div id="progressContainer">
+        <p id="progressText">Progress: 0%</p>
+        <progress id="progressBar" value="0" max="100"></progress>
+      </div>
+    </div>
+
+    <!-- Google API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- WebTorrent Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webtorrent/0.108.6/webtorrent.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
